@@ -1,0 +1,44 @@
+{
+    "name": "@hanzo/insights-icons",
+    "version": "0.36.7",
+    "description": "Product icon set for Hanzo Insights",
+    "author": "Hanzo AI <dev@hanzo.ai>",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hanzoai/insights-icons.git"
+    },
+    "homepage": "https://github.com/hanzoai/insights-icons",
+    "license": "MIT",
+    "sideEffects": false,
+    "main": "./dist/icons.cjs.js",
+    "module": "./dist/icons.es.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/icons.es.js",
+            "require": "./dist/icons.cjs.js"
+        }
+    },
+    "files": [
+        "dist/"
+    ],
+    "scripts": {
+        "build": "vite build",
+        "prepublishOnly": "npm run build"
+    },
+    "peerDependencies": {
+        "react": ">=16.14.0",
+        "react-dom": ">=16.14.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.14",
+        "@types/react-dom": "^18.2.6",
+        "@vitejs/plugin-react": "^4.0.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.0",
+        "vite-plugin-dts": "^3.2.0"
+    }
+}
