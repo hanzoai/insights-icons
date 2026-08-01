@@ -1,0 +1,13 @@
+Hanzo Insights Icons
+Copyright (c) 2024-2026 Hanzo AI, Inc.
+
+This product is a derivative work of the MIT-licensed `@posthog/icons`
+package by PostHog, Inc. (https://posthog.com). The original copyright
+notice and MIT permission notice are retained in LICENSE.
+
+Changes made by Hanzo AI:
+  - Icons render with the `Icon` class instead of the upstream `LemonIcon`
+    class, matching the `@hanzo/elements` design-system stylesheet.
+  - Build output is named `icons.*` rather than carrying the upstream
+    project name in consumer-visible file paths.
+  - Package identity (name, author, repository, homepage) is Hanzo's.
