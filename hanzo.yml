@@ -1,0 +1,19 @@
+# Canonical CI/CD config for hanzoai/insights-icons — the one file both the
+# hanzoai/ci reusable (.hanzo/workflows/cicd.yml) and platform.hanzo.ai read.
+#
+# An npm package (@hanzo/insights-icons): a Vite library build of the icon set.
+# Published from a tag, no image, no deploy.
+#
+# The gate is the build that produces what is published — `vite build` runs the
+# TypeScript through rollup, so a missing export, a bad import path or an icon
+# that no longer parses fails here rather than in the first app that imports it.
+# `tsc --noEmit` runs first because vite's transform strips types without
+# checking them, so the build alone would pass a type error straight through.
+test:
+  - name: build
+    run: |
+      set -e
+      corepack enable
+      pnpm install --frozen-lockfile
+      npx tsc --noEmit
+      pnpm build
