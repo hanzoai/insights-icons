@@ -1,0 +1,8 @@
+# pnpm 10 reads onlyBuiltDependencies from HERE, not from package.json's `pnpm`
+# block. Declaring it there is silently ignored and the install still ends in
+# ERR_PNPM_IGNORED_BUILDS, which is what happened one commit ago.
+#
+# esbuild fetches its platform binary in a postinstall, and vite's build needs
+# it. Named on its own rather than approving every dependency's scripts.
+onlyBuiltDependencies:
+  - esbuild
