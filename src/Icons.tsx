@@ -974,7 +974,7 @@ export const IconDecisionTree: IconComponent<IconProps> = forwardRef(
     }
 )
 
-export const IconDeskHog: IconComponent<IconProps> = forwardRef(function IconDeskHog(props, ref): JSX.Element {
+export const IconDesk: IconComponent<IconProps> = forwardRef(function IconDesk(props, ref): JSX.Element {
     return (
         <BaseIcon ref={ref} {...props}>
             <g clipPath="url(#a)">
@@ -1526,7 +1526,7 @@ export const IconHomeFilled: IconComponent<IconProps> = forwardRef(function Icon
     )
 })
 
-export const IconHogQL: IconComponent<IconProps> = forwardRef(function IconHogQL(props, ref): JSX.Element {
+export const IconInsightsQL: IconComponent<IconProps> = forwardRef(function IconInsightsQL(props, ref): JSX.Element {
     return (
         <BaseIcon ref={ref} {...props}>
             <path
